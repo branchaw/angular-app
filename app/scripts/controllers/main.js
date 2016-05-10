@@ -7,6 +7,7 @@
  * # MainCtrl
  * Controller of the workspaceApp
  */
+/**
 angular.module('workspaceApp')
   .controller('MainCtrl', function () {
     this.awesomeThings = [
@@ -14,4 +15,15 @@ angular.module('workspaceApp')
       'AngularJS',
       'Karma'
     ];
+  });
+*/
+angular.module('workspaceApp')
+  .controller('MainCtrl', function ($scope, current) {
+    $scope.current = current.query();
+    
+    $scope.refreshCurrent = function(){
+        $scope.current = current.query({
+            location: $scope.location
+        });
+    };
   });
