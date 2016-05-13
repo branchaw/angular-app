@@ -17,6 +17,7 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
+    'ngStorage', // added manually by BB to enable localStorage features
     'ngTouch'
   ])
   .config(function ($routeProvider) {
@@ -35,6 +36,16 @@ angular
         templateUrl: 'views/contact.html',
         controller: 'ContactCtrl',
         controllerAs: 'contact'
+      })
+      .when('/current/:cityID', {
+        templateUrl: 'views/current.html',
+        controller: 'CurrentCtrl',
+        controllerAs: 'current'
+      })
+      .when('/forecast/:cityID', {
+        templateUrl: 'views/forecast.html',
+        controller: 'ForecastCtrl',
+        controllerAs: 'forecast'
       })
       .otherwise({
         redirectTo: '/'

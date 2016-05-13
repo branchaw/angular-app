@@ -13,12 +13,12 @@ angular.module('workspaceApp')
     // ...
 
     // Public API here
-    return $resource('http://api.openweathermap.org/data/2.5/weather?q=:location&units=imperial&APPID=d356865266a3596cfb89f23e42e7f9d3', {}, {
+    return $resource('http://api.openweathermap.org/data/2.5/weather?id=:cityID&units=imperial&APPID=d356865266a3596cfb89f23e42e7f9d3', {}, {
       query: {
         method:'GET',
         params:{
-          location: 'Seattle,us',
-          bogus: null
+          cityID: '4717560' //Paris, France
+          
         },
         isArray:false
       }
