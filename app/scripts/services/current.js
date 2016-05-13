@@ -17,8 +17,8 @@ angular.module('workspaceApp')
       query: {
         method:'GET',
         params:{
-          cityID: '4717560' //Paris, France
-          
+          cityID: '4717560', //Paris, France
+          temperature: 'Imperial'
         },
         isArray:false
       }
